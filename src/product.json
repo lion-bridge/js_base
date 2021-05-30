@@ -1,0 +1,8 @@
+{
+    "format": "checkbox",
+    "extraMsg": "自首次“恶性肿瘤--",
+    "id": "controlDutyItem",
+    "linkage": "{'liabilityItem': '7'}",
+    "title": "恶性肿瘤--重度”医疗津贴保险金",
+    "option": []
+}
