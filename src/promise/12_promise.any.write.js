@@ -9,7 +9,7 @@
  *      - d.i=promiseList.length -1，触发reject
  * @param {Promise<string>[]} promiseList 
  */
-Promise.any = function(promiseList){
+Promise._any = function(promiseList){
     let i = 0, j = 0;
     return new Promise((resolve,reject) => {
         for(var p of promiseList){
@@ -44,7 +44,7 @@ var p4 = new Promise((rsv,rjc) => {
     setTimeout(rjc, Math.random() * 200, 'p4');
 })
 
-Promise.any([p1,p2,p3,p4]).then(res => {
+Promise._any([p1,p2,p3,p4]).then(res => {
     console.log('res=',res)
 }).catch(err => {
     console.log('err=',err)

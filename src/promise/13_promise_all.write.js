@@ -7,7 +7,7 @@
  *      - b.reject, 返回第一个拒绝的promise结果
  * @param {Promise<string>[]} promiseList 
  */
-Promise.all1 = function(promiseList){
+Promise._all = function(promiseList){
     return new Promise((resolve, reject) => {
         var ret = [], i = 0, j = 0;
         ret.length = promiseList.length;
@@ -45,7 +45,7 @@ var p4 = new Promise((rsv,rjc) => {
     setTimeout(rsv, Math.random() * 200, 'p4');
 })
 
-Promise.all1([p1,p2,p3,p4]).then(res => {
+Promise._all([p1,p2,p3,p4]).then(res => {
     console.log('res=',res)
 }).catch(err => {
     console.log('err=',err)

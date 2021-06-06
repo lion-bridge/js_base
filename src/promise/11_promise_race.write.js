@@ -5,7 +5,7 @@
  * 2.for循环创建变量i，只要promise决议，则i++
  * @param {Promise<string>[]} promiseList 
  */
-Promise.race1 = function(promiseList = []) {
+Promise._race = function(promiseList = []) {
     return new Promise((resolve, reject) => {
         let i = 0;
         for (var p of promiseList) {
@@ -39,7 +39,7 @@ var p4 = new Promise((rsv,tjc) => {
     setTimeout(rsv, Math.random() * 200, 'p4');
 })
 
-Promise.race([p1,p2,p3,p4]).then(res => {
+Promise._race([p1,p2,p3,p4]).then(res => {
     console.log('res=',res)
 }).catch(err => {
     console.log('err=',err)
