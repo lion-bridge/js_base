@@ -48,6 +48,7 @@ if (!Array.prototype.reduce) {
                 //    ii. Let accumulator be ? Call(
                 //          callbackfn, undefined,
                 //          « accumulator, kValue, k, O »).
+                
                 if (k in o) {
                     value = callback(value, o[k], k, o);
                 }
