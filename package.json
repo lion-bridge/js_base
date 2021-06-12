@@ -1,0 +1,13 @@
+{
+  "name": "js_base",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:w440149517/js_base.git",
+  "author": "吴超 <541847041@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
