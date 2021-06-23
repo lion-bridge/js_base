@@ -71,7 +71,8 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "ESNext"
+      "module": "ESNext",
+      "experimentalDecorators": true
     }
   }
 }
