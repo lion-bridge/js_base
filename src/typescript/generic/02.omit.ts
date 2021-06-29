@@ -20,12 +20,9 @@ const p1233: User2  = {
 };
 console.log(p1233);
 
-interface WithoutProps {
-    address: string;
-    phone: number;
-}
+type WithoutProps = 'address' | 'phone'
 // 删除 address/phone
-interface User3 extends Omit<IUser1, 'address' | 'phone'> {
+interface User3 extends Omit<IUser1, WithoutProps> {
     id: string;
 }
 
